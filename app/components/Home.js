@@ -1,8 +1,10 @@
 "use client";
 
 import LoginForm from "./LoginForm";
-
+import Cookies from "js-cookie";
 export default function Home({ adminId, posterId }) {
+  Cookies.set("adminId", adminId);
+  Cookies.set("posterId", posterId);
   return (
     <div className="container pt-[35px] flex flex-col items-center overflow-x-hidden">
       <div className="w-[65%] lg:w-full">
